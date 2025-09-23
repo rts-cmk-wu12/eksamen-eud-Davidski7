@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cookies } from "next/headers";
+import SwapButton from "./swapbutton";
 
 export default async function DetailsFetch({ id }) {
 
@@ -16,18 +17,24 @@ export default async function DetailsFetch({ id }) {
 
     return (
         <>
+            <div className="details_content">
+                <Image
+                    unoptimized
+                    src={data.asset.url}
+                    width={300}
+                    height={200}
+                    alt={data.title}
+                    className="cardbillede_details"
+                />
 
-            <Image
-                unoptimized
-                src={data.asset.url}
-                width={300}
-                height={200}
-                alt={data.name}
-                className="cardbillede"
-            />
 
-            <div className="cardindhold">
-                <h2 className="cardnavn">{data.title}</h2>
+                <div className="cardindhold">
+                    <h2 className="cardnavn">{data.title}</h2>
+                    <p>{data.description}</p>
+                    <p>{data.createdAt}</p>
+                    <SwapButton />
+                </div>
+
             </div>
 
         </>

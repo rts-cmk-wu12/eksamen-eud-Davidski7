@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MoreButton from "./morebutton";
 
 
 
@@ -7,9 +8,7 @@ import Link from "next/link";
 
 export default async function FrontFetch() {
 
-
-
-    const response = await fetch("http://localhost:4000/api/v1/listings?limit=6", {
+    const response = await fetch("http://localhost:4000/api/v1/listings", {
         headers: {
             "Authorization": `Bearer `
         }
@@ -17,12 +16,31 @@ export default async function FrontFetch() {
 
     const data = await response.json();
 
+    const limitedData = data.slice(0, 6);
 
     return (
         <>
-            <input type="text" name="search" placeholder="search" />
+            <div className="top_indhold">
+                <div className="search-wrapper">
+                    <input
+                        type="text"
+                        name="search"
+                        placeholder="Search"
+                        className="search-input"
+                    />
+                </div>
+
+
+                <div className="filter-wrapper">
+                    <button className="filter-button active">New</button>
+                    <button className="filter-button">Price ascending</button>
+                    <button className="filter-button">Price descending</button>
+                </div>
+
+            </div>
+
             <div className="aktivitet_box">
-                {data.map((card, index) => (
+                {limitedData.map((card, index) => (
                     <Link className="link_to_next_page" href={`/listingdetails/${card.id}`} key={card.id}>
                         <div className="card" key={index}>
                             {card.asset?.url && (
@@ -31,7 +49,7 @@ export default async function FrontFetch() {
                                     src={card.asset.url}
                                     width={300}
                                     height={200}
-                                    alt={card.name}
+                                    alt={card.title}
                                     className="cardbillede"
                                 />
                             )}
@@ -40,8 +58,8 @@ export default async function FrontFetch() {
                             </div>
                         </div>
                     </Link>
-
                 ))}
+                <MoreButton />
             </div>
         </>
     )

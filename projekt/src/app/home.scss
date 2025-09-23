@@ -1,35 +1,80 @@
+.search-wrapper {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.search-input {
+    width: 250px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.top_indhold {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+
+.filter-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.filter-button.active {
+    background: black;
+    color: white;
+}
+
+
+.aktivitet_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .card {
     width: 261px;
     height: 317px;
     background-color: white;
-    align-items: center;
-    outline: 1px solid;
-
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
     flex-direction: column;
-
+    overflow: hidden;
+    align-items: center;
 }
 
 .cardbillede {
     width: 229px;
     height: 247px;
+    object-fit: cover;
 }
 
-.aktivitet_box {
-    display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(3, 2fr);
-    width: 832px;
-    height: 746px;
-    margin-left: 500px;
-
-
+.cardindhold {
+    padding: 8px;
+    text-align: center;
 }
 
 .cardnavn {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .link_to_next_page {
-    width: 261px;
-    height: 317px;
+    text-decoration: none;
+    color: inherit;
 }

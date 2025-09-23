@@ -46,10 +46,15 @@ export default async function LoginAction(prevState, formData) {
     const cookieStore = await cookies();
 
     cookieStore.set("auth_token", data.token, {
-        httpOnly: true,
         maxAge: 60 * 30,
         path: "/"
     });
+
+    cookieStore.set("user_id", data.userId.toString(), {
+        maxAge: 60 * 30,
+        path: "/"
+    });
+
 
 
     return { success: true };

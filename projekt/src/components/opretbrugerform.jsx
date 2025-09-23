@@ -1,35 +1,16 @@
 "use client";
 
-import LoginAction from "@/actions/login-action";
+import OpretBrugerAction from "@/actions/opretbruger-action";
 import { useActionState } from "react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { BeatLoader } from "react-spinners";
 
-const override = {
-    display: "block",
-    margin: "0 auto",
-};
 
 
 // Noget af koden er fra mine tidligere opgaver
 
-export default function LoginForm() {
-    const [formState, formAction, isPending] = useActionState(LoginAction);
+export default function OpretBrugerForm() {
+    const [formState, formAction, isPending] = useActionState(OpretBrugerAction);
 
-    const router = useRouter();
-
-    useEffect(() => {
-        if (formState?.success) {
-            router.push("/");
-        }
-    }, [formState, router]);
-
-    return isPending ? (
-        <BeatLoader color="yellow" loading={true} cssOverride={override} size={50} />
-    ) : (
-
-
+    return (
         <div className="form_container">
             <form className="form_items" action={formAction}>
                 <div className="form_group">
@@ -47,9 +28,19 @@ export default function LoginForm() {
                         <p className="error">{formState?.properties?.password?.errors}</p>
                     </label>
                 </div>
+                <label>
+                    <input className="input_content" placeholder="firstname" type="text" name="firstname" />
+                    <p className="error">  {formState?.properties?.firstname?.errors}</p>
+                </label>
+                <label>
+                    <input className="input_content" placeholder="lastname" type="text" name="lastname" />
+                    <p className="error">{formState?.properties?.lastname?.errors}</p>
+                </label>
 
                 <button className="signin_knap" type="submit">Sign In</button>
                 <p className="error">{formState?.errors}</p>
+
+
 
                 <p>forgot password?</p>
 

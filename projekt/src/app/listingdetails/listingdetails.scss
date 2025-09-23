@@ -1,0 +1,36 @@
+.details_content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 100px;
+}
+
+.cardbillede_details {
+    width: 415px;
+    height: 415px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.cardindhold {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.cardindhold h2 {
+    margin-bottom: 20px;
+}
+
+.cardindhold p {
+    margin-bottom: 16px;
+}
+
+.swapbutton {
+    width: 146px;
+    height: 32px;
+    border-radius: 6px;
+
+}
