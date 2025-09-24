@@ -7,6 +7,8 @@ export default async function ListingDetails({ params }) {
 
     const newParams = await params;
 
+
+
     return (
         <>
             <Header />

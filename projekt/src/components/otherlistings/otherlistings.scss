@@ -1,0 +1,37 @@
+.card {
+    width: 261px;
+    height: 317px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.cardbillede {
+    width: 229px;
+    height: 247px;
+    object-fit: cover;
+}
+
+
+.cardnavn {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.other_listings {
+    margin-left: 120px;
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.other_overtekst {
+    margin-left: 100px;
+
+}

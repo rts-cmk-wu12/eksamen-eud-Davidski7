@@ -2,8 +2,9 @@ import ProfileItem from "@/components/profileitem";
 import { cookies } from "next/headers";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import "./profile.scss";
 
-export default async function Profil() {
+export default async function Profile() {
     const cookieStore = await cookies();
     const token = cookieStore.get("auth_token");
     const userId = cookieStore.get("user_id");
@@ -23,6 +24,7 @@ export default async function Profil() {
     return (
         <>
             <Header />
+            <h1>Velkommen til din profilside</h1>
             <ProfileItem profileData={profileData} />
             <Footer />
         </>

@@ -8,7 +8,7 @@ export const metadata = {
     template: "%s | SwapHub",
     default: "SwapHub"
   },
-  description: "En App hvor du kan tilmelde dig forskellige arktivitetter",
+  description: "En hjemmeside hvor du kan bytte dine brugte ting med andre",
 };
 export default function RootLayout({ children }) {
   return (

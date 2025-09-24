@@ -31,8 +31,8 @@ export default function LoginForm() {
 
 
         <div className="form_container">
-            <form className="form_items" action={formAction}>
-                <div className="form_group">
+            <form className="form_container_item" action={formAction}>
+                <div className="form_items">
 
                     <label>
                         <p>Email</p>
@@ -40,7 +40,7 @@ export default function LoginForm() {
                         <p className="error">{formState?.properties?.email?.errors}</p>
                     </label>
                 </div>
-                <div className="form_group">
+                <div className="form_items">
                     <label>
                         <p>Password</p>
                         <input className="input_content" placeholder="Adgangskode" type="password" name="password" />

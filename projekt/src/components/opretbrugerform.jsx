@@ -12,8 +12,8 @@ export default function OpretBrugerForm() {
 
     return (
         <div className="form_container">
-            <form className="form_items" action={formAction}>
-                <div className="form_group">
+            <form className="form_container_item" action={formAction}>
+                <div className="form_items">
 
                     <label>
                         <p>Email</p>
@@ -21,21 +21,27 @@ export default function OpretBrugerForm() {
                         <p className="error">{formState?.properties?.email?.errors}</p>
                     </label>
                 </div>
-                <div className="form_group">
+                <div className="form_items">
                     <label>
                         <p>Password</p>
                         <input className="input_content" placeholder="Adgangskode" type="password" name="password" />
                         <p className="error">{formState?.properties?.password?.errors}</p>
                     </label>
                 </div>
-                <label>
-                    <input className="input_content" placeholder="firstname" type="text" name="firstname" />
-                    <p className="error">  {formState?.properties?.firstname?.errors}</p>
-                </label>
-                <label>
-                    <input className="input_content" placeholder="lastname" type="text" name="lastname" />
-                    <p className="error">{formState?.properties?.lastname?.errors}</p>
-                </label>
+                <div className="form_items">
+                    <label>
+                        <p>Firstname</p>
+                        <input className="input_content" placeholder="firstname" type="text" name="firstname" />
+                        <p className="error">  {formState?.properties?.firstname?.errors}</p>
+                    </label>
+                </div>
+                <div className="form_items">
+                    <label>
+                        <p>Lastname</p>
+                        <input className="input_content" placeholder="lastname" type="text" name="lastname" />
+                        <p className="error">{formState?.properties?.lastname?.errors}</p>
+                    </label>
+                </div>
 
                 <button className="signin_knap" type="submit">Sign In</button>
                 <p className="error">{formState?.errors}</p>

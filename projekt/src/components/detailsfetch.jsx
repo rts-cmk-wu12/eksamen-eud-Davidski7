@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { cookies } from "next/headers";
 import SwapButton from "./swapbutton";
+import OtherListings from "./otherlistings/otherlistings";
+
 
 export default async function DetailsFetch({ id }) {
 
@@ -36,6 +38,8 @@ export default async function DetailsFetch({ id }) {
                 </div>
 
             </div>
+
+            <OtherListings sellerId={data.userId} currentListingId={data.id} />
 
         </>
 

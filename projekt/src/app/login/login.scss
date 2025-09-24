@@ -4,17 +4,16 @@
     margin-top: 40px;
 }
 
-.form_items {
+.form_container_item {
     background-color: #fff;
     width: 320px;
     padding: 20px;
     border: 1px solid #dcdcdc;
     border-radius: 8px;
-    font-family: sans-serif;
     font-size: 14px;
 }
 
-.form_group {
+.form_items {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
@@ -55,9 +54,7 @@
     cursor: pointer;
     margin-top: 10px;
 
-    &:hover {
-        opacity: 0.9;
-    }
+
 }
 
 .forgot_password {

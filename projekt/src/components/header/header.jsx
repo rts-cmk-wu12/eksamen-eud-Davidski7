@@ -23,7 +23,7 @@ export default async function Header() {
                         <Link href="/">Community</Link>
                     </li>
                     <li>
-                        <Link href="/">Contact</Link>
+                        <Link href="/contact">Contact</Link>
                     </li>
                 </ul>
             </nav>
@@ -45,7 +45,7 @@ export default async function Header() {
                                 Log Out
                             </button>
                         </form>
-                        <Link href="/profil">
+                        <Link href="/profile">
                             <button className="button button-dark">Profil</button>
                         </Link>
                     </>

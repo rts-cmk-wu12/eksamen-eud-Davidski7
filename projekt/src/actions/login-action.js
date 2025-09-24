@@ -36,7 +36,7 @@ export default async function LoginAction(prevState, formData) {
     if (!response.ok) {
         return {
             success: false,
-            errors: ["Brugernavn eller adgangskode er forkert"]
+            errors: ["Email eller adgangskode er forkert"]
         };
     }
 

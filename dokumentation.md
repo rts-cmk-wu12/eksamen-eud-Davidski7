@@ -7,9 +7,9 @@ David Alexander Simonsen
 
 `npm run dev`
 
-http://localhost:3000/aktiviteter
+http://localhost:3000
 
-Jeg har lavet valgfriopgave B som betyder at man skal kunne oprette bruger selv 
+Jeg har lavet valgfriopgave c som betyder at man skal kunne oprette bruger selv 
 ...
 
 
@@ -21,11 +21,11 @@ Et bibliotek der giver mig mulighed for at lave komponenter og håndtere states 
 * **Git**  
 Et versionsstyringsværktøj, som lader mig lave branches og versioner af min kode, så jeg let kan gå tilbage til tidligere versioner, hvis jeg for eksmapel har lavet en fejl. Jeg bruger Git sammen med GitHub.
 * **React-icons**  
-Et ikon-bibliotek, som er beregnet på React. 
+Et ikon-bibliotek hvor du kan finde alle de iconer du skal bruge, som er beregnet på React. 
 * **SASS**  
-En udvidelse til CSS, som lader mig lave funktioner, variabler, mixins og nesting. Jeg kan opdele min CSS i moduler og dermed genbruge kode flere steder.
-* **Web-API fra Landrup Dans**  
-Et interface til at få adgang til Landrup Dans's data, så jeg kan lave min egen app.
+En udvidelse eller tilføjelse til CSS, som lader mig lave funktioner, variabler, mixins og nesting. Jeg kan opdele min CSS i moduler og dermed genbruge kode flere steder.
+* **Web-API fra SwapHub**  
+Et interface til at få adgang til Swap Hub's data, så jeg kan bruge det på min egen side.
 * **Zod**  
 Et valideringsbibliotek til objekter og strings. Jeg bruger Zod til blandt andet at validere bruger-input fra formularer.
 * **react-spinners**

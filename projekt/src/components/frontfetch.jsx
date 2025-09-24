@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MoreButton from "./morebutton";
+import Search from "./search";
 
 
 
@@ -21,14 +22,7 @@ export default async function FrontFetch() {
     return (
         <>
             <div className="top_indhold">
-                <div className="search-wrapper">
-                    <input
-                        type="text"
-                        name="search"
-                        placeholder="Search"
-                        className="search-input"
-                    />
-                </div>
+                <Search />
 
 
                 <div className="filter-wrapper">

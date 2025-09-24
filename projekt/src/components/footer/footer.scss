@@ -5,6 +5,7 @@
     padding: 40px 80px;
     border-top: 1px solid #eee;
     margin-top: 40px;
+    position: absolute;
 
 
     .footer_items {
@@ -24,11 +25,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-
-            span {
-                font-size: 18px;
-                font-weight: bold;
-            }
         }
 
         .socials {
