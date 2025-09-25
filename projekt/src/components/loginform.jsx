@@ -2,34 +2,39 @@
 
 import LoginAction from "@/actions/login-action";
 import { useActionState } from "react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { BeatLoader } from "react-spinners";
+import { redirect } from "next/navigation";
+import { toast, ToastContainer } from "react-toastify";
 
-const override = {
-    display: "block",
-    margin: "0 auto",
-};
+import { useEffect } from "react";
+
+
 
 
 // Noget af koden er fra mine tidligere opgaver
 
 export default function LoginForm() {
-    const [formState, formAction, isPending] = useActionState(LoginAction);
+    const [formState, formAction, pending] = useActionState(LoginAction);
 
-    const router = useRouter();
+    useEffect(function () {
+        pending ? toast.loading("Logger ind...", { toastId: "loader" }) : toast.dismiss();
 
-    useEffect(() => {
         if (formState?.success) {
-            router.push("/");
+            toast.update("loader", {
+                toastId: "loader",
+                render: "Du er nu logget ind!",
+                type: "success",
+                isLoading: false,
+                closeOnClick: false,
+                hideProgressBar: true,
+                position: "top-right"
+            });
+            setTimeout(function () {
+                redirect("/");
+            }, 2000);
         }
-    }, [formState, router]);
+    }, [formState, pending]);
 
-    return isPending ? (
-        <BeatLoader color="yellow" loading={true} cssOverride={override} size={50} />
-    ) : (
-
-
+    return (
         <div className="form_container">
             <form className="form_container_item" action={formAction}>
                 <div className="form_items">
@@ -50,11 +55,13 @@ export default function LoginForm() {
 
                 <button className="signin_knap" type="submit">Sign In</button>
                 <p className="error">{formState?.errors}</p>
+                <ToastContainer />
 
                 <p>forgot password?</p>
 
             </form>
         </div>
-
     )
+
+
 }

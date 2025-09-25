@@ -2,13 +2,36 @@
 
 import OpretBrugerAction from "@/actions/opretbruger-action";
 import { useActionState } from "react";
+import { redirect } from "next/navigation";
+import { toast, ToastContainer } from "react-toastify";
+
+import { useEffect } from "react";
 
 
 
 // Noget af koden er fra mine tidligere opgaver
 
 export default function OpretBrugerForm() {
-    const [formState, formAction, isPending] = useActionState(OpretBrugerAction);
+    const [formState, formAction, pending] = useActionState(OpretBrugerAction);
+
+    useEffect(function () {
+        pending ? toast.loading("Opretter bruger...", { toastId: "loader" }) : toast.dismiss();
+
+        if (formState?.success) {
+            toast.update("loader", {
+                toastId: "loader",
+                render: "Du har nu oprettet en ny bruger!",
+                type: "success",
+                isLoading: false,
+                closeOnClick: false,
+                hideProgressBar: true,
+                position: "top-right"
+            });
+            setTimeout(function () {
+                redirect("/login");
+            }, 2000);
+        }
+    }, [formState, pending]);
 
     return (
         <div className="form_container">
@@ -42,13 +65,9 @@ export default function OpretBrugerForm() {
                         <p className="error">{formState?.properties?.lastname?.errors}</p>
                     </label>
                 </div>
-
                 <button className="signin_knap" type="submit">Sign In</button>
                 <p className="error">{formState?.errors}</p>
-
-
-
-                <p>forgot password?</p>
+                <ToastContainer />
 
             </form>
         </div>

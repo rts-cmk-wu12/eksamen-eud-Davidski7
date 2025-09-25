@@ -1,0 +1,30 @@
+.previous_next_button {
+    margin-top: 40px;
+    margin-left: 550px;
+
+    .active {
+        background-color: black;
+        color: white;
+        border: none;
+        height: 32px;
+        width: 32px;
+        border-radius: 6px;
+    }
+
+    .not_active {
+        height: 32px;
+        width: 32px;
+        background-color: white;
+        border: none;
+    }
+
+    .next_button {
+        background-color: white;
+        border: none;
+    }
+
+    .previous_button {
+        background-color: white;
+        border: none;
+    }
+}

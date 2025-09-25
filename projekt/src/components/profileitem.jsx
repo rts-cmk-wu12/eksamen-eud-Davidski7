@@ -23,7 +23,7 @@ export default function ProfileItem({ profileData }) {
                 <div className="form_items">
                     <label>
                         <span>Adresse</span>
-                        <input className="input_content" type="text" name="adresse" defaultValue={profileData.adresse} readOnly />
+                        <input className="input_content" type="text" name="adresse" readOnly disabled />
                     </label>
                 </div>
                 <div className="form_items">
@@ -35,7 +35,7 @@ export default function ProfileItem({ profileData }) {
                 <div className="form_items">
                     <label>
                         <span>Password</span>
-                        <input className="input_content" type="password" name="password" defaultValue={profileData.password} readOnly disabled />
+                        <input className="input_content" type="password" name="password" placeholder="Vi kan desværre ikke vise dit password" readOnly disabled />
                     </label>
                 </div>
                 <button type="submit" >Gem</button>

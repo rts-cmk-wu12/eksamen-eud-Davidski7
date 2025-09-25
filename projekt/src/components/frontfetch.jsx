@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import MoreButton from "./morebutton";
+import MoreButton from "./morebutton/morebutton";
 import Search from "./search";
 
 
@@ -21,17 +21,9 @@ export default async function FrontFetch() {
 
     return (
         <>
-            <div className="top_indhold">
-                <Search />
 
+            <Search limitedData={limitedData} />
 
-                <div className="filter-wrapper">
-                    <button className="filter-button active">New</button>
-                    <button className="filter-button">Price ascending</button>
-                    <button className="filter-button">Price descending</button>
-                </div>
-
-            </div>
 
             <div className="aktivitet_box">
                 {limitedData.map((card, index) => (
@@ -53,8 +45,9 @@ export default async function FrontFetch() {
                         </div>
                     </Link>
                 ))}
-                <MoreButton />
+
             </div>
+            <MoreButton />
         </>
     )
 }

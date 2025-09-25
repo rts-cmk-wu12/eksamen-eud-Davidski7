@@ -4,6 +4,10 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import "./profile.scss";
 
+export const metadata = {
+    title: "Profile"
+};
+
 export default async function Profile() {
     const cookieStore = await cookies();
     const token = cookieStore.get("auth_token");
