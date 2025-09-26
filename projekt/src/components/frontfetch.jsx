@@ -22,7 +22,7 @@ export default async function FrontFetch() {
     return (
         <>
 
-            <Search limitedData={limitedData} />
+            <Search />
 
 
             <div className="aktivitet_box">

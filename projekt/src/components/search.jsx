@@ -14,7 +14,7 @@ export default function Search() {
         <>
             <div className="top_indhold">
                 <form action={formAction}>
-                    <div className="search-wrapper">
+                    <div className="search-indhold">
                         <label>
                             <input type="search" name="keyword" placeholder="Search" className="search-input" />
                         </label>
@@ -23,7 +23,7 @@ export default function Search() {
 
 
 
-                <div className="filter-wrapper">
+                <div className="filter-indhold">
 
                     <button className="filter-button active">New</button>
                     <button className="filter-button">Price ascending</button>

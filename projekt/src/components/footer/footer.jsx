@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="logo">
                         <img src="/Block.png" alt="SwapHub Logo" />
                     </div>
-                    <div className="socials">
+                    <div className="socials_links">
                         <Link href="https://x.com/"><FaXTwitter /></Link>
                         <Link href="https://www.instagram.com/"><FaInstagram /></Link>
                         <Link href="https://www.youtube.com/"><FaYoutube /></Link>
@@ -20,7 +20,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className="footer_col">
+                <div className="footer_list">
                     <h3>About SwapHub</h3>
                     <Link href="#">How it works</Link>
                     <Link href="#">Community guidelines</Link>
@@ -29,7 +29,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className="footer_col">
+                <div className="footer_list">
                     <h3>Discover</h3>
                     <Link href="#">Browse categories</Link>
                     <Link href="#">Popular Swaps</Link>
@@ -38,7 +38,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className="footer_col">
+                <div className="footer_list">
                     <h3>Support</h3>
                     <Link href="#">Help Center</Link>
                     <Link href="#">FAQs</Link>

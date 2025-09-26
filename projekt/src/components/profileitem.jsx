@@ -2,7 +2,7 @@
 
 // Noget af koden er fra mine tidligere opgaver
 
-export default function ProfileItem({ profileData }) {
+export default function ProfileItem({ loginData }) {
 
 
     return (
@@ -11,25 +11,19 @@ export default function ProfileItem({ profileData }) {
                 <div className="form_items">
                     <label>
                         <span>Fornavn</span>
-                        <input className="input_content" type="text" name="firstname" defaultValue={profileData.firstname} readOnly disabled />
+                        <input className="input_content" type="text" name="firstname" defaultValue={loginData.firstname} readOnly disabled />
                     </label>
                 </div>
                 <div className="form_items">
                     <label>
                         <span>Efternavn</span>
-                        <input className="input_content" type="text" name="lastname" defaultValue={profileData.lastname} readOnly disabled />
-                    </label>
-                </div>
-                <div className="form_items">
-                    <label>
-                        <span>Adresse</span>
-                        <input className="input_content" type="text" name="adresse" readOnly disabled />
+                        <input className="input_content" type="text" name="lastname" defaultValue={loginData.lastname} readOnly disabled />
                     </label>
                 </div>
                 <div className="form_items">
                     <label>
                         <span>Email</span>
-                        <input className="input_content" type="email" name="email" defaultValue={profileData.email} readOnly disabled />
+                        <input className="input_content" type="email" name="email" defaultValue={loginData.email} readOnly disabled />
                     </label>
                 </div>
                 <div className="form_items">
@@ -38,7 +32,6 @@ export default function ProfileItem({ profileData }) {
                         <input className="input_content" type="password" name="password" placeholder="Vi kan desværre ikke vise dit password" readOnly disabled />
                     </label>
                 </div>
-                <button type="submit" >Gem</button>
             </form>
         </div>
     );

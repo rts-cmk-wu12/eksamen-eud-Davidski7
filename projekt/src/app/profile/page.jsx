@@ -21,15 +21,13 @@ export default async function Profile() {
 
     });
 
-    const profileData = await response.json();
-
-    console.log(profileData)
+    const loginData = await response.json();
 
     return (
         <>
             <Header />
-            <h1>Velkommen til din profilside</h1>
-            <ProfileItem profileData={profileData} />
+            <h1 className="hovedoverskrift">Velkommen til din profilside</h1>
+            <ProfileItem loginData={loginData} />
             <Footer />
         </>
     );

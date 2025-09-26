@@ -30,17 +30,17 @@ Et front-end framework baseret på React.js som også giver adgang til server-si
 * **React**  
 Et bibliotek der giver mig mulighed for at lave komponenter og håndtere states på en god og let måde. React har et stort community med stort modul-bibliotedk, som er aktivt, vel-dokumenteret og  vel-understøttet. Det er også det mest brugte front-end bibliotek i verden, så efterspørgslen på React-udviklere er stor. 
 * **Git**  
-Et versionsstyringsværktøj, som lader mig lave branches og versioner af min kode, så jeg let kan gå tilbage til tidligere versioner, hvis jeg for eksmapel har lavet en fejl. Jeg bruger Git sammen med GitHub.
+Et versionsstyringsværktøj, som lader mig lave branches og versioner af min kode, så jeg let kan gå tilbage til tidligere versioner, hvis jeg for eksmapel har lavet en fejl. Jeg bruger Git sammen med GitHub eller jeg kommer til at slette det så har jeg altid en backup af min kode og kan nemt tilgå min kode på alle computer.
 * **React-icons**  
-Et ikon-bibliotek hvor du kan finde alle de iconer du skal bruge, som er beregnet på React. 
+Et ikon-bibliotek hvor du har mulighed for at finde alle de iconer du skal bruge, som er beregnet på React. 
 * **SASS**  
 En udvidelse eller tilføjelse til CSS, som lader mig lave funktioner, variabler, mixins og nesting. Jeg kan opdele min CSS i moduler og dermed genbruge kode flere steder.
-* **Web-API fra SwapHub**  
-Et interface til at få adgang til Swap Hub's data, så jeg kan bruge det på min egen side.
+* **API fra SwapHub**  
+Et interface til at få adgang til Swap Hub's data, så jeg kan bruge det på min egen side til at få adgang til den data som jeg skal bruge.
 * **Zod**  
 Et valideringsbibliotek til objekter og strings. Jeg bruger Zod til blandt andet at validere bruger-input fra formularer.
-* **react-spinners**
-Et Loader-bibliotek, som er beregnet til React. Hvor du kan finde forskellige funktionelle Loaders 
+* **react-toastify**
+Et bibliotek, som er beregnet til React. Hvor du kan finde forskellige funktionelle pop up beskeder, til bl. a. når du har send en form og prøver at logge ind. 
 
 
 ## kode-eksempel
@@ -88,7 +88,7 @@ export default function Search() {
 
 ```
 ## kode-Forklaring
-Jeg vælger at gøre det her komponent til client-side, og det betyder, at komponenten kører på client-siden i browseren. Det er vigtigt her, fordi jeg bruger React hooks som useActionState og useEffect. Hooks fungerer kun i client components, når du kører Next.js.
+Jeg vælger at gøre det her komponent til client-side, og det betyder, at komponenten kører på client-siden i browseren. Det er nødvendigt her, fordi jeg bruger React hooks som useActionState og useEffect. Hooks fungerer kun i client components, når du kører Next.js.
 
 Først importerer jeg de ting, jeg skal bruge - useActionState og useEffect fra React, samt min SearchAction, som jeg har liggende i min actions-mappe.
 
@@ -96,25 +96,28 @@ Jeg starter med at kalde useActionState(SearchAction). Den giver mig tre ting:
 
 formState, som er det state, jeg får tilbage, når jeg har sendt en søgning.
 
-formAction, som er den funktion, jeg kan sætte som action på mit <form>, så den kører min SearchAction.
+formAction, som er den funktion, jeg kan sætte som action på mit form tag, så den kører min SearchAction.
 
 pending, som kan bruges, hvis jeg vil vise en loader, mens søgningen kører.
 
 Jeg har en useEffect, der kører hver gang formState ændrer sig.
 
-I min return har jeg mit søgefelt pakket ind i et <form>. Når jeg trykker enter eller submitter, kalder den automatisk formAction, og så kører SearchAction på serveren.
+I min return har jeg mit søgefelt pakket ind i et form tag. Når jeg trykker enter eller submitter, kalder den formAction, og så kører SearchAction på serveren.
 
 Så har jeg mine 3 filter knapper men som ikke rigtig gøre noget.
 
-Lige under viser jeg resultaterne:
+Lige under viser jeg resultaterne af det som du har søgt efter:
 
 Hvis formState er et array men uden indhold, skriver jeg en besked: "Der er ingen resultater".
 
-Hvis der er noget i formState, mapper jeg over det og viser hver enkelt listing som en <div> med titel.
+Hvis der er noget i formState, mapper jeg over det og viser hver enkelt listing som en div med titel.
 
 
 ## Ændringer/Valg jeg har taget
-1. Jeg har valgt at søgeresultatet kommer frem under inputfeltet 
+1. Jeg har valgt at søgeresultatet kommer frem under inputfeltet.
+2. Jeg har valgt at gøre så man kan tilmelde sig nyhedsbrevt på contact siden som du finder ved at trykke på contact oppe i min header.
+3. Jeg har valgt at bruge det samme design på alle mine formular så de ligner alle sammen hinanden.
+4. Jeg har valgt ikke at tilføje Adresse til min profil formular fordi det ikke rigtig gav nogen mening i forhold til den data som man udfylder ved opret bruger.
 
 
 

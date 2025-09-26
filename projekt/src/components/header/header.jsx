@@ -42,7 +42,7 @@ export default async function Header() {
                     <>
                         <form action={LogoutAction}>
                             <button type="submit" className="button button-light">
-                                Log Out
+                                Log out
                             </button>
                         </form>
                         <Link href="/profile">

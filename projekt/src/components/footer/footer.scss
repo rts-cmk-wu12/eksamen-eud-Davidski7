@@ -27,7 +27,7 @@
             gap: 8px;
         }
 
-        .socials {
+        .socials_links {
             display: flex;
             gap: 16px;
 
@@ -35,15 +35,11 @@
                 font-size: 22px;
                 color: #000;
                 transition: color 0.3s ease;
-
-                &:hover {
-                    color: #4CAF50;
-                }
             }
         }
     }
 
-    .footer_col {
+    .footer_list {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -59,10 +55,6 @@
             color: #333;
             text-decoration: none;
             transition: color 0.2s ease;
-
-            &:hover {
-                color: #4CAF50;
-            }
         }
     }
 }

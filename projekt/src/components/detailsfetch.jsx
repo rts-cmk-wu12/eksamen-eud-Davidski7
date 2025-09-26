@@ -4,6 +4,9 @@ import SwapButton from "./swapbutton";
 import OtherListings from "./otherlistings/otherlistings";
 
 
+
+// Noget af koden er fra mine tidligere opgaver
+
 export default async function DetailsFetch({ id }) {
 
     const cookieStore = await cookies();
@@ -39,7 +42,7 @@ export default async function DetailsFetch({ id }) {
 
             </div>
 
-            <OtherListings sellerId={data.userId} currentListingId={data.id} />
+            <OtherListings sellerId={data.userId} activeListingId={data.id} />
 
         </>
 

@@ -1,4 +1,4 @@
-.search-wrapper {
+.search-indhold {
     display: flex;
     gap: 8px;
     margin-bottom: 16px;
@@ -23,7 +23,7 @@
 
 }
 
-.filter-wrapper {
+.filter-indhold {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
@@ -35,7 +35,6 @@
     border-radius: 8px;
     border: 1px solid #ccc;
     background: #f5f5f5;
-    cursor: pointer;
 }
 
 .filter-button.active {

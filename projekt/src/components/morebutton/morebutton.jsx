@@ -6,9 +6,6 @@ import "./morebutton.scss";
 
 export default function MoreButton() {
 
-
-
-
     return (
         <div className="previous_next_button">
             <button className="previous_button"><GrFormPrevious /> Previous</button>

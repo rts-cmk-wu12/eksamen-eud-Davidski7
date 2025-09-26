@@ -2,7 +2,7 @@ import Image from "next/image";
 import { cookies } from "next/headers";
 import "./otherlistings.scss";
 
-export default async function OtherListings({ sellerId, currentListingId }) {
+export default async function OtherListings({ sellerId, activeListingId }) {
     const cookieStore = await cookies();
     const token = cookieStore.get("auth_token")?.value;
 
@@ -16,7 +16,7 @@ export default async function OtherListings({ sellerId, currentListingId }) {
 
 
     const sellerListings = Listings.filter(
-        item => item.userId === sellerId && item.id !== currentListingId
+        item => item.userId === sellerId && item.id !== activeListingId
     );
 
 
